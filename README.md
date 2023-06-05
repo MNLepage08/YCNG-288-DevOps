@@ -78,7 +78,7 @@
 
 * [Desing Thinking (Change by Design): ](https://youtu.be/_r0VX-aU_T8)
   
-* **3 pilar of desgn thinking** - **Insipration:** The problem or opportunity that motivates the search of solution. **Ideation:** The process of generating, developing, and testing ideas. **Implementation:** The path that leads from the project stage into people's lives.
+* **3 pilar of design thinking** - **Insipration:** The problem or opportunity that motivates the search of solution. **Ideation:** The process of generating, developing, and testing ideas. **Implementation:** The path that leads from the project stage into people's lives.
   
 * **Inspiration -** **Insights:** Focus more on understanding deeply. Not always from quantitative data. Go out in the world. Talk to users… Capture ”thoughtless acts”. **Observation:** “Watching what people don’t do, listening to what they don’t say”. Watch how people behaves, reacts… **Empathy:** Put yourself into their shoes. Can be done literally. **Overview:** Get insights,	Get the constrains,	Create the team, Get insights, Define personas, Define the user experiment.
 
