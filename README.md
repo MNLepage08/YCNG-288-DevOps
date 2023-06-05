@@ -84,7 +84,7 @@
 
 * **Ideation:** Defer Judgment. Encourage Ideas. Stay Focus on the topic. Build on the ideas of others. The Goal is to create a story board according the experience(s) we want the personas to live. Diverge/Converge. Define the scop.
 
-* **Implementation:** Quick and dirty. The goal is to get feedback as early as possible. Create a mockup (sketch/draft). Test the mockup with the team  get feedback (iterate). Create a prototype.
+* **Implementation:** Quick and dirty. The goal is to get feedback as early as possible. Create a mockup (sketch/draft). Test the mockup with the team. Get feedback (iterate). Create a prototype.
 
 * **The team for the interview:** Expert(vertical knowledge), Technical person, The client, The end user, Anyone that could answer the questions and provide insignth.
 
