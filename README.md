@@ -15,7 +15,7 @@
 <details close>
 <summary>Presentation of the experience and metrics the user should have using the design methodology.<p></summary>
   
-<img width="500" alt="Capture d’écran, le 2023-06-05 à 18 13 14" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/238ee409-b31e-4f89-966f-40f83415c09b"> <img width="500" alt="Capture d’écran, le 2023-06-05 à 18 13 27" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/1d3c5b62-2481-4d10-abab-4a0aa9fb8c67"><p>
+<img width="400" alt="Capture d’écran, le 2023-06-05 à 18 13 14" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/238ee409-b31e-4f89-966f-40f83415c09b"> <img width="400" alt="Capture d’écran, le 2023-06-05 à 18 13 27" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/1d3c5b62-2481-4d10-abab-4a0aa9fb8c67"><p>
   
 </details> 
 
