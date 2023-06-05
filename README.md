@@ -7,11 +7,19 @@
 * Foresee the challenges of deploying and maintain a machine learning model and to avoid the last mile issue.
 * Create a solution for stock market prediction.
 
-
+  
 ## :rocket: Assignments
  
-* **Project: Where should I invest my money?** I am an investor focused on the S&P 500. I would like to use AI to know every night what should I buy and what should I sell. My strategy is: ”If the price of today is higher than the price of tomorrow, I sell. If the price of today is lower than the price of tomorrow, I buy”. Can you help me with this project?
+**Project: Where should I invest my money?** I am an investor focused on the S&P 500. I would like to use AI to know every night what should I buy and what should I sell. My strategy is: ”If the price of today is higher than the price of tomorrow, I sell. If the price of today is lower than the price of tomorrow, I buy”. Can you help me with this project?
 
+<details close>
+<summary>Presentation of the experience and metrics the user should have using the design methodology.<p></summary>
+  
+<img width="500" alt="Capture d’écran, le 2023-06-05 à 18 13 14" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/238ee409-b31e-4f89-966f-40f83415c09b"> <img width="500" alt="Capture d’écran, le 2023-06-05 à 18 13 27" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/1d3c5b62-2481-4d10-abab-4a0aa9fb8c67"><p>
+  
+</details> 
+
+  
   
 ## :mortar_board: Courses
 
@@ -63,3 +71,32 @@
 * Good practices: Avoid Jupyter Notebook to create the solution (fine for exploration). Separate business logic, data IO, and algorithm into 3 separated modules. [When possible, leverage functional programming](https://towardsdatascience.com/functional-programing-in-data-science-projects-c909c11138bb). Do not alter data manually or on your local machine. Leverage the CI/CD. Stateless code. Use conda for code development and docker for running tests locally. Any result should be discarded if not produced by CI/CD.
 
 </details>
+
+  
+<details close>
+<summary>2. Definition of the objectives. How to scope a project. Presentation of the data used for this project. <p></summary>
+
+* [Desing Thinking (Change by Design): ](https://youtu.be/_r0VX-aU_T8)
+  
+* **3 pilar of desgn thinking - *Insipration:* The problem or opportunity that motivates the search of solution. **Ideation:** The process of generating, developing, and testing ideas. **Implementation:** The path that leads from the project stage into people's lives.
+  
+* **Inspiration -** **Insights:** Focus more on understanding deeply. Not always from quantitative data. Go out in the world. Talk to users… Capture ”thoughtless acts”. **Observation:** “Watching what people don’t do, listening to what they don’t say”. Watch how people behaves, reacts… **Empathy:** Put yourself into their shoes. Can be done literally. **Overview:** Get insights,	Get the constrains,	Create the team, Get insights, Define personas, Define the user experiment.
+
+* **Ideation:** Defer Judgment. Encourage Ideas. Stay Focus on the topic. Build on the ideas of others. The Goal is to create a story board according the experience(s) we want the personas to live. Diverge/Converge. Define the scop.
+
+* **Implementation:** Quick and dirty. The goal is to get feedback as early as possible. Create a mockup (sketch/draft). Test the mockup with the team  get feedback (iterate). Create a prototype.
+
+* **The team for the interview:** Expert(vertical knowledge), Technical person, The client, The end user, Anyone that could answer the questions and provide insignth.
+
+* **Example of questions:** Why do you need this? Who will use it? How often? What did you try? How do you know the current solution is not good? What mechanism do you use to evaluate your current solution? Assuming we are done with the project, who will maintain it? What number do you need? What precision do you need?
+  
+* [Data: yahoo_fin package](https://theautomatic.net/yahoo_fin-documentation/)
+  
+</details>  
+  
+  
+## :books: Bibliography
+
+| <img width="150" alt="Capture d’écran, le 2023-06-05 à 17 38 38" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/68236fc3-5c5c-4027-aa31-d16052eddc17"> | 
+| :-------------: | 
+| Change by desing | 
