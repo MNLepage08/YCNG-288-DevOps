@@ -43,7 +43,7 @@
 <details close>
 <summary>1. Overview of the different phases of a data science project. Technologies used in this project. Definition of the project. Agile methodology. <p></summary>
 
-* [Fail:](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/what-separates-leaders-from-laggards-in-the-internet-of-things)  Dartner Estimated - 85% of big data projects fail (2017). 80% of AI projects will remain alchemy, run by wizards whose talents will not scale in the organization (2020). 20% of analytic insights will deliver business outcomes (2022). 77% respondents say that “business adoption” of big data and AI initiatives continues to represent a challenge for their organizations. Many reasons: Over engineering, Scoop change, Not asking the right question.<p>
+* [Fail:](https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/what-separates-leaders-from-laggards-in-the-internet-of-things)  Gartner Estimated - 85% of big data projects fail (2017). 80% of AI projects will remain alchemy, run by wizards whose talents will not scale in the organization (2020). 20% of analytic insights will deliver business outcomes (2022). 77% respondents say that “business adoption” of big data and AI initiatives continues to represent a challenge for their organizations. Many reasons: Over engineering, Scoop change, Not asking the right question.<p>
 
 * Technical Dept:<p> <img width="527" align="left" alt="Capture d’écran, le 2023-06-05 à 16 17 14" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/a6c0bccc-a2c9-4fd8-b3d4-66e4c97b4a6b"><br><br><br><br><br><br><br><br>
 
