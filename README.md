@@ -67,7 +67,18 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 <details close>
 <summary>Create a conda environtment<p></summary>
   
-[With GPU for M1 Chips](https://www.mrdbourke.com/setup-apple-m1-pro-and-m1-max-for-machine-learning-and-data-science/)
+Suppose you have already installed [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/), create an environment from an [environment.yml](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) file
+```
+$ conda env create -f YCNG-288-DevOps/scripts/environment.yml
+``` 
+Activate the new environment:
+```
+$ conda activate DevOps
+```
+Verify that the new environment was installed correctly:
+```
+$ conda env list
+```
   
 </details>   
 
