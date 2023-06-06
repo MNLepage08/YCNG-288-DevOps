@@ -47,7 +47,7 @@
 <details close>
 <summary>Create a GitHub repo<p></summary>
 
-* [GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
+* [GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)"To put your project up on GitHub, you will need to create a repository for it to live in." Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
   
 </details>   
   
