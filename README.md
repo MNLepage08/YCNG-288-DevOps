@@ -53,6 +53,7 @@
   
 </details>   
   
+  
 <details close>
 <summary>Clone the repo<p></summary>
 
@@ -82,6 +83,17 @@ $ conda env list
   
 </details>   
 
+  
+<details close>
+<summary>Add the project to PyCharm<p></summary>
+ 
+* Open the project YCNG-288-DevOps.
+* On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.10(DevOps).
+
+  
+</details>  
+  
+  
 ## :pencil2: Notes
 
 <details close>
