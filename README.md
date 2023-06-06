@@ -62,7 +62,14 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ``` 
   
 </details>  
-
+  
+  
+<details close>
+<summary>Create a conda environtment<p></summary>
+  
+[With GPU for M1 Chips](https://www.mrdbourke.com/setup-apple-m1-pro-and-m1-max-for-machine-learning-and-data-science/)
+  
+</details>   
 
 ## :pencil2: Notes
 
