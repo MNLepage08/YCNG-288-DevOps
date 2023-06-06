@@ -12,6 +12,10 @@
  
 **Project: Where should I invest my money?** I am an investor focused on the S&P 500. I would like to use AI to know every night what should I buy and what should I sell. My strategy is: ”If the price of today is higher than the price of tomorrow, I sell. If the price of today is lower than the price of tomorrow, I buy”. Can you help me with this project?
 
+**Scope of the project:** The solution should be an end point(API). We assume the ticker is always valid and belong to the current S&P500. Input: [ URL ]/[ ... ]/< ticker >. Output: a string with "Buy" or "Sell". Train < 01/06/2022. Test >= 01/06/2022 and < 01/09/2022. The metric to use is balanced accuracy.<br><br>
+
+**TeamWork:** Data Scientist & Data Architect
+  
 <details close>
 <summary>Presentation of the experience and metrics the user should have using the design methodology.<p></summary>
   
@@ -19,7 +23,6 @@
   
 </details> 
 
-  
   
 ## :mortar_board: Courses
 
@@ -37,6 +40,24 @@
 | 10 | Manage Bias in models and explainable AI. |
 | 11 | Final Exam. |
 | 12 | Retrospective. |
+
+
+## :hammer_and_wrench: Setup Environments
+  
+<details close>
+<summary>Create a GitHub repo<p></summary>
+
+* [GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
+  
+</details>   
+  
+<details close>
+<summary>Clone the repo<p></summary>
+
+* [Cloning a repository: ]([https://docs.github.com/en/get-started/quickstart/create-a-repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
+  
+</details>  
+
 
 ## :pencil2: Notes
 
@@ -93,7 +114,28 @@
 * [Data: yahoo_fin package](https://theautomatic.net/yahoo_fin-documentation/)
   
 </details>  
+
   
+<details close>
+<summary>3. Definition of roles and responsibilities. What are the different skills required to develop the solution? <p></summary>
+  
+* **A brief history of Data Science:** New profession which would support the understanding and interpretation of the large amounts of data which was being amassed at the time. Statistics --> Machine Learning --> Deep Learning. Directly caused by the bid data. Data scientist = Statistician _ Software Engineering.
+  
+* **List of roles:** Data scientist: Applied Data Scientist, Data engineer, Research scientist, MlOps, Business Analyst. Database engineer: Data Architect, Data Analyst. Web Developper: Software Developper (Web - Full stack, Back end, Front end).
+  
+* <img width="330" align="right" alt="Capture d’écran, le 2023-06-05 à 22 52 37" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/6bbd71d9-a79f-4547-a5cd-2c6c407db271">[Understand the data science process:](https://www.kdnuggets.com/2015/11/different-data-science-roles-industry.html) 1. Get the data, 2. Analyse data, 3. Clean data, 4. Create features, 5. Train model/Evaluate the model, 6. Package model, 7. Deploy pipeline (pipeline = from data prediction), 8. Integrate pipeline in the app/platform, 9. Monitor model.
+  
+</details> 
+
+  
+<details close>
+<summary>4. Sprint 0: Set the stage to develop the solution.<p></summary>
+
+* **The goal of the sprint 0 is:** To set up your environment. To do a quick data analysis.See the section on setup environments for more details. <img width="500" align="right" alt="Capture d’écran, le 2023-06-05 à 23 39 30" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/31da2cb9-46bb-404a-b595-8b0f6f79b9af">
+  
+* Workflow Example: 
+  
+</details>
   
 ## :books: Bibliography
 
