@@ -133,7 +133,7 @@
 
 * <img width="500" align="right" alt="Capture d’écran, le 2023-06-06 à 00 45 04" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/e302e987-dd99-49e7-aa28-c0fec5e4e5e5">**The goal of the sprint 0 is:** To set up your environment. To do a quick data analysis.See the section on setup environments for more details. 
   
-* **Workflow Example:** You should see this process as circles. You might spend a lot of time iterating on models/strategies. However, you should always stay close to a production state where the code can run on GCP. To do so, I recommend baby steps and make sure your changes will not break the app functionality.<br><br><br>
+* **Workflow Example:** You should see this process as circles. You might spend a lot of time iterating on models/strategies. However, you should always stay close to a production state where the code can run on GCP. To do so, I recommend baby steps and make sure your changes will not break the app functionality.<p>
   
 </details>
   
