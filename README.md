@@ -54,7 +54,7 @@
 <details close>
 <summary>Clone the repo<p></summary>
 
-* [Cloning a repository: ]([https://docs.github.com/en/get-started/quickstart/create-a-repo](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository))"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
+* [Cloning a repository: ](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
   
 </details>  
 
