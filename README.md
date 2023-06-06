@@ -131,9 +131,9 @@
 <details close>
 <summary>4. Sprint 0: Set the stage to develop the solution.<p></summary>
 
-* **The goal of the sprint 0 is:** To set up your environment. To do a quick data analysis.See the section on setup environments for more details. <img width="500" align="right" alt="Capture d’écran, le 2023-06-05 à 23 39 30" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/31da2cb9-46bb-404a-b595-8b0f6f79b9af">
+* <img width="500" align="right" alt="Capture d’écran, le 2023-06-06 à 00 45 04" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/e302e987-dd99-49e7-aa28-c0fec5e4e5e5">**The goal of the sprint 0 is:** To set up your environment. To do a quick data analysis.See the section on setup environments for more details. 
   
-* Workflow Example: 
+* Workflow Example: <br><br><br><br><br><br><br><br>
   
 </details>
   
