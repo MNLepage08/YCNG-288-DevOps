@@ -7,6 +7,8 @@
 * Foresee the challenges of deploying and maintain a machine learning model and to avoid the last mile issue.
 * Create a solution for stock market prediction.
 
+
+   
   
 ## :rocket: Assignments
  
@@ -47,14 +49,17 @@
 <details close>
 <summary>Create a GitHub repo<p></summary>
 
-* [GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)"To put your project up on GitHub, you will need to create a repository for it to live in." Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
+[GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)"To put your project up on GitHub, you will need to create a repository for it to live in." Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
   
 </details>   
   
 <details close>
 <summary>Clone the repo<p></summary>
 
-* [Cloning a repository: ](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
+[Cloning a repository: ](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+``` 
   
 </details>  
 
