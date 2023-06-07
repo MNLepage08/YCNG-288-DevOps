@@ -88,7 +88,7 @@ $ conda env list
 <summary>Add the project to PyCharm<p></summary>
  
 * Open the project YCNG-288-DevOps.
-* On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.10(DevOps).
+* On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.9(DevOps).
 
   
 </details>  
