@@ -89,7 +89,7 @@ $ conda env list
  
 * Open the project YCNG-288-DevOps.
 * On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.9(DevOps).
-
+* Ready to work locally.
   
 </details>  
   
