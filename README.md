@@ -25,6 +25,15 @@
   
 </details> 
 
+
+<details close>
+<summary>Presentation of the most striking findings in the data analysis and the backlog for the next sprint.</summary>
+  
+[Data Analysis Code](https://github.com/MNLepage08/YCNG-288-DevOps/blob/main/DevOps%20-%20Data%20Analysis.ipynb)
+
+<img width="400" alt="Capture d’écran, le 2023-06-21 à 15 51 35" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/94938117-0a52-46a2-93d2-009fd3c13a84"><img width="400" alt="Capture d’écran, le 2023-06-21 à 15 51 53" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/924d7a54-6e36-4b4b-83c6-8d98fb7bb63c">
+
+</details> 
   
 ## :mortar_board: Courses
 
