@@ -207,6 +207,69 @@ $ conda env list
  
 * **After the baseline?** You basically already got a backlog. For each questions like: Does clustering help? How much lag? How many nodes? ... Create an experiment and get a new number.
 
+</details>
+
+
+<details close>
+<summary>6. Sprint 2: Productize the baseline.<p></summary>
+
+* **What are the risks in a data science project?** **Sprint 1:** Data is not accessible. You cannot derive a label. There is too much data to handle (big data tools). You can run into memory issue when you load the dataset. **Sprit 2:** Can run your code on a different machine? Can you package your code? Is the operationalization of the model doable?
+
+* **Different mode of productization**
+  1. Data scientists provide **specifications**, and a team of software engineer will review it and implement it.
+  2. Data scientists provide a **code base** exposing the functionalities and a team of software developer will use it in a specific environment.
+  3. Data scientists provide a **docker image** and a team of software developer will instantiate the container and build the app around it.
+  4. Data scientis provide an **end-point** and software developer build an app around it.
+ 
+* **Pros and Cons**
+  
+| Hands off mode | Pros | Cons | Data Scientist role | Software developer role | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Specification | The code is highly optimized and stable. Suitable for a data scientist with little knowledge in software development. | Very slow to iterate on the solution. The hands off take place when the model reach the desired accuracy --> waterfall. RISK: The data science code and the software developer code diverges. | Write and maintain specifications. | Develop and support the entire code base.
+| Code base | The code can be very minimal and easy to build using pip package. | If a bug occurs in the code base, data scientist must be fix it. | Write and maintain data science code. | Develop and maintain everything except the data science code. |
+| Docker | The docker container can handle system requirement changes. | Data scientist must build a server. | Weite and maintain data science + server code. | Instantiate the docker and build the infrastructure. |
+| End point | The data science code can rely on specific infrastructure (GPU, spark, etc.) | Data scientist are not good at building infrastructure --> spaghetti. | Set up and maintain infrastructure | Develop and maintain the app accessing the end point |
+
+* **Now that you have a baseline, what next?** Isolate the pieces - IO, Preprocessing, Feature engineering, Model training, Model inference, Model evaluation, Save train models, ...
+
+* **3 components:** Business logic, IO, Algo.
+  
+* **Business logic:** Goal - Handle a query and provide a prediction. It should decide when training and storing the models. Is dependent on Data Science and IO.
+  ```
+  def create_buisiness_logic()
+    data_fetcher = get_last_stock_price
+    return BusinessLogic(Stock_model(data_fetcher))
+  ```
+  Expose:
+  ```
+  def do_predictions_for(self, ticker):
+  ```
+
+* **IO:** Should handle any transaction to store or retrieve things such as model or data. The business logic will use those functions without knowing the underlying code.
+  ```
+  def get_last_stock_rice(ticker, last=False):
+  def upload_file_to_bucker(model_file_name, bucket_name):
+  def get_model_from_bucket(model_filename, bucker_name):
+  ```
+
+* **Algo:** The goal of the Algo code is to train a model or to do a prediction. F(Ticker) --> model. F(Ticker) --> prediction.
+  ```
+  def fit(self, X, Y=None):
+  def predict(self, X, Y=None:
+  ```
+  The algo code will use the data fetcher to retrieve data. I recommend composition:
+  ```
+  class Stock_model(BaseEstimator, TransformerMinMax):
+    def __init__(self, data_fetcher):
+      self._data_fetcher = data_fetcher
+  ```
+
+* **What about evalutaion code?** It is not in the deliverables. Should be kept outside but should call code from the appropriate component. /evaluation, /src/IO, /src/algo, /src/BusinellLogic. change PYTHONPATH to point to src. In /evaluation/mynitebook: from src.algo import mymodel, from src.IO import data fetcher, ...
+  
+* **Debug cycle**
+  1. **Testing the APP:** Run your app on your local machine (python app.py). If it work go to  step 2. If not, debug your code using your IDE.
+  2. **Testing the packaging and dependencies:** Run your app in a local docker container. It it works go to step 3. If not run, run your docker container in an interactive mode and launch the app.
+  3. **Testing the deployment and the architecture:** Push your code, build the solution (automatic with Google build) and deploy. If it works, Congrats! If not, look at the logs.
 
 </details>
 
