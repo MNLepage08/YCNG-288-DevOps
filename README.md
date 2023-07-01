@@ -18,7 +18,7 @@
 
 **TeamWork:** Data Scientist & Data Architect
 
-**Baseline Model:** 
+[**Baseline Model:**](https://github.com/MNLepage08/YCNG-288-DevOps/blob/main/DevOps%20-%20Baseline.ipynb) 
 * Source of data: Yahoo-fin S&P500.
 * Proprocessing: No null data.
 * Feature: 1 week of close price (5 lags).
