@@ -43,7 +43,7 @@
 | 2 | Definition of the objectives. How to scope a project. Presentation of the data used for this project. |
 | 3 | Definition of roles and responsibilities. What are the different skills required to develop the solution? |
 | 4 | Sprint 0: Set the stage to develop the solution. |
-| 5 | Sprint 1: get a baseline, design of experiments, hypothesis testing. |
+| 5 | Sprint 1: Get a baseline, design of experiments, hypothesis testing. |
 | 6 | Sprint 2: Productize the baseline. |
 | 7 | Iteration 1: Improve the solution. Methods to increase accuracy/ precision, or other metrics. How to optimize your time? |
 | 8 | End of the exploration and long-term considerations. |
@@ -180,7 +180,30 @@ $ conda env list
 * **Workflow Example:** You should see this process as circles. You might spend a lot of time iterating on models/strategies. However, you should always stay close to a production state where the code can run on GCP. To do so, I recommend baby steps and make sure your changes will not break the app functionality.<p>
   
 </details>
-  
+
+
+<details close>
+<summary>5. Sprint 1: Get a baseline, design of experiments, hypothesis testing.<p></summary>
+
+* **Why do we need a baseline?** A baseline model is essentially a simple model that acts as a reference in a machine learning project. Its main function is to contextualize the results of trained models. Baseline models usually lack complexity and may have little predictive power. Regardless, their inclusion is a necessity for many reasons.
+
+* **Overall process**<p><img width="700" align="left" alt="Capture d’écran, le 2023-06-30 à 20 27 54" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/24ffebe1-ecb1-46ba-85df-a159023e588e"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+* **Proposed evaluation strategy:** For each of the 500 tickers, for each of the days between 01/06/2022 and 01/09/2022: prediction.append(prediction(ticker, date)). Compute balance accuracy (actuals, predictions).
+
+* **Choose the right approach:** Complexity / Impact on<p>
+<img width="300" align="right" alt="Capture d’écran, le 2023-06-30 à 20 43 10" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/6adb80fc-4836-4044-a03f-b7a31740f37e"><p>
+  1. What model should I use? LSTM, Logistic Regression, Repeat the last one, XGBoost, Moving Average, DNN, ARIMA, ...
+  2. What features should I use? Number of lags, Difference on close price, Moving Average, Days of week, Month of the year, ...
+  3. What preprocessing should I use? Standard Scaler for each ticker, Smoothing linear, First derivative for smoothing, nothing, ...
+  4. The ways to cellect data for this project? Get tweets for S&P500, Yahoo_fin, Australian MSCI, ...
+ 
+* **After the baseline?** You basically already got a backlog. For each questions like: Does clustering help? How much lag? How many nodes? ... Create an experiment and get a new number.
+
+
+</details>
+
+
 ## :books: Bibliography
 
 | <img width="150" alt="Capture d’écran, le 2023-06-05 à 17 38 38" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/68236fc3-5c5c-4027-aa31-d16052eddc17"> | 
