@@ -17,6 +17,13 @@
 **Scope of the project:** The solution should be an end point(API). We assume the ticker is always valid and belong to the current S&P500. Input: [ URL ]/[ ... ]/< ticker >. Output: a string with "Buy" or "Sell". Train < 01/06/2022. Test >= 01/06/2022 and < 01/09/2022. The metric to use is balanced accuracy.<br><br>
 
 **TeamWork:** Data Scientist & Data Architect
+
+**Baseline Model:** 
+* Source of data: Yahoo-fin S&P500.
+* Proprocessing: No null data.
+* Feature: 1 week of close price (5 lags).
+* Model: Logistic Regression.
+* Balanced accuracy = 49.87%
   
 <details close>
 <summary>Presentation of the experience and metrics the user should have using the design methodology.<p></summary>
