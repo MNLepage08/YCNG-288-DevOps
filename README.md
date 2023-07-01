@@ -17,6 +17,13 @@
 **Scope of the project:** The solution should be an end point(API). We assume the ticker is always valid and belong to the current S&P500. Input: [ URL ]/[ ... ]/< ticker >. Output: a string with "Buy" or "Sell". Train < 01/06/2022. Test >= 01/06/2022 and < 01/09/2022. The metric to use is balanced accuracy.<br><br>
 
 **TeamWork:** Data Scientist & Data Architect
+
+[**Baseline Model:**](https://github.com/MNLepage08/YCNG-288-DevOps/blob/main/DevOps%20-%20Baseline.ipynb) 
+* Source of data: Yahoo-fin S&P500.
+* Proprocessing: No null data.
+* Feature: 1 week of close price (5 lags).
+* Model: Logistic Regression.
+* Balanced accuracy = 49.87%
   
 <details close>
 <summary>Presentation of the experience and metrics the user should have using the design methodology.<p></summary>
@@ -25,6 +32,15 @@
   
 </details> 
 
+
+<details close>
+<summary>Presentation of the most striking findings in the data analysis and the backlog for the next sprint.</summary>
+  
+[Data Analysis Code](https://github.com/MNLepage08/YCNG-288-DevOps/blob/main/DevOps%20-%20Data%20Analysis.ipynb)
+
+<img width="400" alt="Capture d’écran, le 2023-06-21 à 15 51 35" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/94938117-0a52-46a2-93d2-009fd3c13a84"><img width="400" alt="Capture d’écran, le 2023-06-21 à 15 51 53" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/924d7a54-6e36-4b4b-83c6-8d98fb7bb63c">
+
+</details> 
   
 ## :mortar_board: Courses
 
@@ -34,7 +50,7 @@
 | 2 | Definition of the objectives. How to scope a project. Presentation of the data used for this project. |
 | 3 | Definition of roles and responsibilities. What are the different skills required to develop the solution? |
 | 4 | Sprint 0: Set the stage to develop the solution. |
-| 5 | Sprint 1: get a baseline, design of experiments, hypothesis testing. |
+| 5 | Sprint 1: Get a baseline, design of experiments, hypothesis testing. |
 | 6 | Sprint 2: Productize the baseline. |
 | 7 | Iteration 1: Improve the solution. Methods to increase accuracy/ precision, or other metrics. How to optimize your time? |
 | 8 | End of the exploration and long-term considerations. |
@@ -88,8 +104,8 @@ $ conda env list
 <summary>Add the project to PyCharm<p></summary>
  
 * Open the project YCNG-288-DevOps.
-* On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.10(DevOps).
-
+* On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.9(DevOps).
+* Ready to work locally.
   
 </details>  
   
@@ -171,7 +187,93 @@ $ conda env list
 * **Workflow Example:** You should see this process as circles. You might spend a lot of time iterating on models/strategies. However, you should always stay close to a production state where the code can run on GCP. To do so, I recommend baby steps and make sure your changes will not break the app functionality.<p>
   
 </details>
+
+
+<details close>
+<summary>5. Sprint 1: Get a baseline, design of experiments, hypothesis testing.<p></summary>
+
+* **Why do we need a baseline?** A baseline model is essentially a simple model that acts as a reference in a machine learning project. Its main function is to contextualize the results of trained models. Baseline models usually lack complexity and may have little predictive power. Regardless, their inclusion is a necessity for many reasons.
+
+* **Overall process**<p><img width="700" align="left" alt="Capture d’écran, le 2023-06-30 à 20 27 54" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/24ffebe1-ecb1-46ba-85df-a159023e588e"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+* **Proposed evaluation strategy:** For each of the 500 tickers, for each of the days between 01/06/2022 and 01/09/2022: prediction.append(prediction(ticker, date)). Compute balance accuracy (actuals, predictions).
+
+* **Choose the right approach:** Complexity / Impact on<p>
+<img width="300" align="right" alt="Capture d’écran, le 2023-06-30 à 20 43 10" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/6adb80fc-4836-4044-a03f-b7a31740f37e"><p>
+  1. What model should I use? LSTM, Logistic Regression, Repeat the last one, XGBoost, Moving Average, DNN, ARIMA, ...
+  2. What features should I use? Number of lags, Difference on close price, Moving Average, Days of week, Month of the year, ...
+  3. What preprocessing should I use? Standard Scaler for each ticker, Smoothing linear, First derivative for smoothing, nothing, ...
+  4. The ways to cellect data for this project? Get tweets for S&P500, Yahoo_fin, Australian MSCI, ...
+ 
+* **After the baseline?** You basically already got a backlog. For each questions like: Does clustering help? How much lag? How many nodes? ... Create an experiment and get a new number.
+
+</details>
+
+
+<details close>
+<summary>6. Sprint 2: Productize the baseline.<p></summary>
+
+* **What are the risks in a data science project?** **Sprint 1:** Data is not accessible. You cannot derive a label. There is too much data to handle (big data tools). You can run into memory issue when you load the dataset. **Sprit 2:** Can run your code on a different machine? Can you package your code? Is the operationalization of the model doable?
+
+* **Different mode of productization**
+  1. Data scientists provide **specifications**, and a team of software engineer will review it and implement it.
+  2. Data scientists provide a **code base** exposing the functionalities and a team of software developer will use it in a specific environment.
+  3. Data scientists provide a **docker image** and a team of software developer will instantiate the container and build the app around it.
+  4. Data scientis provide an **end-point** and software developer build an app around it.
+ 
+* **Pros and Cons**
   
+| Hands off mode | Pros | Cons | Data Scientist role | Software developer role | 
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Specification | The code is highly optimized and stable. Suitable for a data scientist with little knowledge in software development. | Very slow to iterate on the solution. The hands off take place when the model reach the desired accuracy --> waterfall. RISK: The data science code and the software developer code diverges. | Write and maintain specifications. | Develop and support the entire code base.
+| Code base | The code can be very minimal and easy to build using pip package. | If a bug occurs in the code base, data scientist must be fix it. | Write and maintain data science code. | Develop and maintain everything except the data science code. |
+| Docker | The docker container can handle system requirement changes. | Data scientist must build a server. | Weite and maintain data science + server code. | Instantiate the docker and build the infrastructure. |
+| End point | The data science code can rely on specific infrastructure (GPU, spark, etc.) | Data scientist are not good at building infrastructure --> spaghetti. | Set up and maintain infrastructure | Develop and maintain the app accessing the end point |
+
+* **Now that you have a baseline, what next?** Isolate the pieces - IO, Preprocessing, Feature engineering, Model training, Model inference, Model evaluation, Save train models, ...
+
+* **3 components:** Business logic, IO, Algo.
+  
+* **Business logic:** Goal - Handle a query and provide a prediction. It should decide when training and storing the models. Is dependent on Data Science and IO.
+  ```
+  def create_buisiness_logic()
+    data_fetcher = get_last_stock_price
+    return BusinessLogic(Stock_model(data_fetcher))
+  ```
+  Expose:
+  ```
+  def do_predictions_for(self, ticker):
+  ```
+
+* **IO:** Should handle any transaction to store or retrieve things such as model or data. The business logic will use those functions without knowing the underlying code.
+  ```
+  def get_last_stock_price(ticker, last=False):
+  def upload_file_to_bucker(model_file_name, bucket_name):
+  def get_model_from_bucket(model_filename, bucker_name):
+  ```
+
+* **Algo:** The goal of the Algo code is to train a model or to do a prediction. F(Ticker) --> model. F(Ticker) --> prediction.
+  ```
+  def fit(self, X, Y=None):
+  def predict(self, X, Y=None:
+  ```
+  The algo code will use the data fetcher to retrieve data. I recommend composition:
+  ```
+  class Stock_model(BaseEstimator, TransformerMinMax):
+    def __init__(self, data_fetcher):
+      self._data_fetcher = data_fetcher
+  ```
+
+* **What about evalutaion code?** It is not in the deliverables. Should be kept outside but should call code from the appropriate component. /evaluation, /src/IO, /src/algo, /src/BusinellLogic. change PYTHONPATH to point to src. In /evaluation/mynitebook: from src.algo import mymodel, from src.IO import data fetcher, ...
+  
+* **Debug cycle**
+  1. **Testing the APP:** Run your app on your local machine (python app.py). If it work go to  step 2. If not, debug your code using your IDE.
+  2. **Testing the packaging and dependencies:** Run your app in a local docker container. It it works go to step 3. If not run, run your docker container in an interactive mode and launch the app.
+  3. **Testing the deployment and the architecture:** Push your code, build the solution (automatic with Google build) and deploy. If it works, Congrats! If not, look at the logs.
+
+</details>
+
+
 ## :books: Bibliography
 
 | <img width="150" alt="Capture d’écran, le 2023-06-05 à 17 38 38" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/68236fc3-5c5c-4027-aa31-d16052eddc17"> | 
