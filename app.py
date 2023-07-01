@@ -1,6 +1,6 @@
 from flask import Flask
 import git
-from src.IO.get_data_from_yahoo import ticker_stock, ticker_price, ticker_lags
+from src.IO.get_data_from_yahoo import ticker_stock, data_training, data_prediction
 
 
 app = Flask(__name__)
@@ -13,8 +13,10 @@ def welcome_msg():
 
 @app.route('/get_predict_stock/<my_ticker>', methods=['GET'])
 def get_predict_value(my_ticker):
-    data = ticker_lags()
-    return data
+    my_data_predict = data_prediction(my_ticker)
+    print(my_data_predict)
+    txt = "work on it"
+    return txt
 
 
 @app.route('/getversion/')

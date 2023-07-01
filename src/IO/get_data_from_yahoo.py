@@ -10,8 +10,7 @@ def ticker_stock():
     return sp
 
 
-# Price for each Ticker and dates
-def ticker_price():
+def data_training():
     # get list of S&P 500 ticker
     sp = ticker_stock()
     # pull data for each S&P stock
@@ -20,18 +19,9 @@ def ticker_price():
     return combined
 
 
-# Lags of close price for each Ticker
-def ticker_lags():
-    combined = ticker_price()
-    sp = ticker_stock()
-
-    # Create DataFrame
-    lags = pd.DataFrame(columns=['open', 'high', 'low', 'close', 'adjclose', 'volume', 'ticker', 'lag_0', 'lag_1',
-                                 'lag_2', 'lag_3', 'lag_4'])
-    for ticker in sp:
-        mask = (combined['ticker'] == ticker)
-        ticker = combined.loc[mask]
-        for lag in range(0, 5):
-            ticker[f'lag_{lag}'] = ticker['close'].shift(lag)
-        lags = lags.append(ticker)
-    return lags
+def data_prediction(my_ticker):
+    now = datetime.now()
+    start_date = now - timedelta(days=90)
+    prediction = si.get_data(my_ticker, start_date)
+    prediction = prediction[prediction['close'].notnull()]
+    return prediction
