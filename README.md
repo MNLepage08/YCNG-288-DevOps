@@ -247,7 +247,7 @@ $ conda env list
 
 * **IO:** Should handle any transaction to store or retrieve things such as model or data. The business logic will use those functions without knowing the underlying code.
   ```
-  def get_last_stock_rice(ticker, last=False):
+  def get_last_stock_price(ticker, last=False):
   def upload_file_to_bucker(model_file_name, bucket_name):
   def get_model_from_bucket(model_filename, bucker_name):
   ```
