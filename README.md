@@ -41,23 +41,6 @@
 <img width="400" alt="Capture d’écran, le 2023-06-21 à 15 51 35" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/94938117-0a52-46a2-93d2-009fd3c13a84"><img width="400" alt="Capture d’écran, le 2023-06-21 à 15 51 53" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/924d7a54-6e36-4b4b-83c6-8d98fb7bb63c">
 
 </details> 
-  
-## :mortar_board: Courses
-
-| # | Sessions | 
-| ------------- | ------------- |
-| 1 | Overview of the different phases of a data science project. Technologies used in this project. Definition of the project. Agile methodology. |
-| 2 | Definition of the objectives. How to scope a project. Presentation of the data used for this project. |
-| 3 | Definition of roles and responsibilities. What are the different skills required to develop the solution? |
-| 4 | Sprint 0: Set the stage to develop the solution. |
-| 5 | Sprint 1: Get a baseline, design of experiments, hypothesis testing. |
-| 6 | Sprint 2: Productize the baseline. |
-| 7 | Iteration 1: Improve the solution. Methods to increase accuracy/ precision, or other metrics. How to optimize your time? |
-| 8 | End of the exploration and long-term considerations. |
-| 9 | What can go wrong? Common pitfall and how to avoid it. |
-| 10 | Manage Bias in models and explainable AI. |
-| 11 | Final Exam. |
-| 12 | Retrospective. |
 
 
 ## :hammer_and_wrench: Setup Environments
@@ -107,7 +90,25 @@ $ conda env list
 * On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.9(DevOps).
 * Ready to work locally.
   
-</details>  
+</details> 
+
+  
+## :mortar_board: Courses
+
+| # | Sessions | 
+| ------------- | ------------- |
+| 1 | Overview of the different phases of a data science project. Technologies used in this project. Definition of the project. Agile methodology. |
+| 2 | Definition of the objectives. How to scope a project. Presentation of the data used for this project. |
+| 3 | Definition of roles and responsibilities. What are the different skills required to develop the solution? |
+| 4 | Sprint 0: Set the stage to develop the solution. |
+| 5 | Sprint 1: Get a baseline, design of experiments, hypothesis testing. |
+| 6 | Sprint 2: Productize the baseline. |
+| 7 | Iteration 1: Improve the solution. Methods to increase accuracy/ precision, or other metrics. How to optimize your time? |
+| 8 | End of the exploration and long-term considerations. |
+| 9 | What can go wrong? Common pitfall and how to avoid it. |
+| 10 | Manage Bias in models and explainable AI. |
+| 11 | Final Exam. |
+| 12 | Retrospective. | 
   
   
 ## :pencil2: Notes
