@@ -100,7 +100,7 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
-<summary>Local developpenent workflow<p></summary>
+<summary>Local development workflow<p></summary>
   
   | Code organisation | Goal | 
   | ------------- | ------------- |
