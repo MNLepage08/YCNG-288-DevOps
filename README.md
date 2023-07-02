@@ -264,7 +264,7 @@ $ conda env list
       self._data_fetcher = data_fetcher
   ```
 
-* **What about evalutaion code?** It is not in the deliverables. Should be kept outside but should call code from the appropriate component. /evaluation, /src/IO, /src/algo, /src/BusinellLogic. change PYTHONPATH to point to src. In /evaluation/mynitebook: from src.algo import mymodel, from src.IO import data fetcher, ...
+* **What about evalutaion code?** It is not in the deliverables. Should be kept outside but should call code from the appropriate component. /evaluation, /src/IO, /src/algo, /src/BusinellLogic. change PYTHONPATH to point to src. In /evaluation/mynotebook: from src.algo import mymodel, from src.IO import data fetcher, ...
   
 * **Debug cycle**
   1. **Testing the APP:** Run your app on your local machine (python app.py). If it work go to  step 2. If not, debug your code using your IDE.
