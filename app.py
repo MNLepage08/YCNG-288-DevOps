@@ -1,8 +1,7 @@
-from flask import Flask
+from flask import Flask, request
 import git
-from src.IO.get_data_from_yahoo import ticker_stock, data_training, data_prediction
+from src.IO.get_data_from_yahoo import tickers_sp500, data_training, data_prediction
 from src.algo.transform_data import lags
-
 
 app = Flask(__name__)
 
@@ -23,14 +22,13 @@ def get_predict_value(my_ticker):
 @app.route('/train_model/<my_date>', methods=['GET'])
 def train_model(my_date):
     # my_date format = '%Y-%m-%d'
-    my_sp = ticker_stock()
-    #my_train_dataframe = data_training()
+    my_sp = tickers_sp500()
+    my_train_dataframe = data_training()
     #lag_table = lags(my_train_dataframe, my_sp)
 
-    #score = train_baseline_model(my_train_dataframe, my_sp, my_date)
-    #print(score)
-    print(my_sp)
-    #print(my_train_dataframe)
+    # score = train_baseline_model(my_train_dataframe, my_sp, my_date)
+    # print(score)
+    print(my_train_dataframe)
     score = "work on it"
     return score
 
