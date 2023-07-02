@@ -123,7 +123,7 @@ Verify that the new environment was installed correctly:
   
 * [Get the credentials (json):](https://developers.google.com/workspace/guides/create-credentials?hl=fr) In the navigation menu, select IAM & Admin / Service Accounts. Click on + create service account. Enter service account name and Service account ID (Project ID). Click on create and continue. Click on your service account created / keys / add keys / create a new key / JSON / create. Your private kay is saved on your computer.
   
-* Set up the environment variable ```GOOGLE_APPLICATION_CREDENTIALS```:
+* Set up the environment variable ```GOOGLE_APPLICATION_CREDENTIALS``` on your terminal:
   ```diff
   export GOOGLE_APPLICATION_CREDENTIALS='/path of the credentials.json'
 
