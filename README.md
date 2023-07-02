@@ -115,6 +115,22 @@ Verify that the new environment was installed correctly:
   
 </details> 
 
+
+<details close>
+<summary>Google Cloud - Create a project, Get the credentials, Add a Triggers<p></summary>
+  
+* [Create your project:](https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=fr) In the navigation menu, select IAM & Admin / Create a project. Enter your project name (ex: YCNG-288-DevOps) and click create.
+  
+* [Get the credentials (json):](https://developers.google.com/workspace/guides/create-credentials?hl=fr) In the navigation menu, select IAM & Admin / Service Accounts. Click on + create service account. Enter service account name and Service account ID (Project ID). Click on create and continue. Click on your service account created / keys / add keys / create a new key / JSON / create. Your private kay is saved on your computer.
+  
+* Set up the environment variable ```GOOGLE_APPLICATION_CREDENTIALS```:
+  ```diff
+  export GOOGLE_APPLICATION_CREDENTIALS='/path of the credentials.json'
+
+* [Add a Triggers:](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers?hl=fr) In navigate menu / Cloud Build / Click on enable. When is done, go in Triggers and click on create trigger. Enter a name (ex: YCNG-288-DevOps), Region: us-central1(lowa), Event: Push to a branch, Repository: Connect new repository. Select source code management provider: GitHub (Cloud Build GitHub App), continue. Select repository: GitHub Account, Repository: MNLepage08/YCNG-288-DevOps. Connect. Select the Repository, Branch ^main$. Click on create.
+
+</details>
+
   
 ## :mortar_board: Courses
 
