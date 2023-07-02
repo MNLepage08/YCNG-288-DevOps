@@ -29,5 +29,4 @@ def lags(my_data, my_sp):
     all_lag = all_lag.drop(all_lag[['open', 'high', 'low', 'adjclose', 'volume', 'date']], axis=1)
     all_lag = all_lag.dropna()
 
-    # print(all_lag)
     return all_lag
