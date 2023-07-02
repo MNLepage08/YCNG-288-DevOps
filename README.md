@@ -67,18 +67,24 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 <details close>
 <summary>Create a conda environtment<p></summary>
   
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | scripts/environment.yml | For create a conda environment. |
+  
 Suppose you have already installed [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/), create an environment from an [environment.yml](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) file
-```
-$ conda env create -f YCNG-288-DevOps/scripts/environment.yml
-``` 
+  ```
+  $ conda env create -f YCNG-288-DevOps/scripts/environment.yml
+  ```
+  
 Activate the new environment:
-```
-$ conda activate DevOps
-```
+  ```
+  $ conda activate DevOps
+  ```
+  
 Verify that the new environment was installed correctly:
-```
-$ conda env list
-```
+  ```
+  $ conda env list
+  ```
   
 </details>   
 
@@ -89,6 +95,23 @@ $ conda env list
 * Open the project YCNG-288-DevOps.
 * On Run / Edit Configuration, Add new / Python / Name: DevOps, Script path: app.py, Python interpreter: Python 3.9(DevOps).
 * Ready to work locally.
+  
+</details> 
+
+
+<details close>
+<summary>Local developpenent workflow<p></summary>
+  
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | app.py | This file contains the main for the Flask server. It is also the entrypoint of the app. The purpose of this project is not to be a master developing an app, so the work in this file should remains minimal. |
+  | src/IO | This directory deal with fetching the data. |
+  | src/algo | This directory contains the code to transform the data and create the model. |
+  | src/business_logic | This code contains the logic to process the query. |
+
+* You should see this process as circles. You might spend a lot of time iterating on models/strategies. However, you should always stay close to a production state where the code can run on GCP. To do so, I recommend baby steps and make sure your changes will not break the app functionality.
+
+* Run python ```app.py``` and use curl ```http://localhost:8080/[name_of_your_end_point]``` to test the endpoint. You can run the server from your favorite IDE. This will help to debug.
   
 </details> 
 
