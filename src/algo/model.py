@@ -10,7 +10,7 @@ def train_baseline_model(my_data, my_sp, my_date):
     date_object = date_object.replace(day=1)
 
     # The name of the model based on the date
-    version_model = 'baseline_' + str(date_object.year) + '_' + str(date_object.month) + '_v2.pkl'
+    version_model = 'baseline_' + str(date_object.year) + '_' + str(date_object.month) + '.pkl'
 
     txt = "work on that"
     return txt

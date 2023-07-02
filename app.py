@@ -24,11 +24,11 @@ def train_model(my_date):
     # my_date format = '%Y-%m-%d'
     my_sp = tickers_sp500()
     my_train_dataframe = data_training()
-    #lag_table = lags(my_train_dataframe, my_sp)
+    lag_table = lags(my_train_dataframe, my_sp)
 
     # score = train_baseline_model(my_train_dataframe, my_sp, my_date)
     # print(score)
-    print(my_train_dataframe)
+    print(lag_table)
     score = "work on it"
     return score
 

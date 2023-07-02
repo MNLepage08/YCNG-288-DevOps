@@ -1,16 +1,18 @@
 import pandas as pd
+import warnings
+warnings.filterwarnings('ignore')
 
 
-# Function for the output values
 def tagger(row):
+    """Function for the output values"""
     if row['next'] < row['lag_0']:
         return 'Sell'
     else:
         return 'Buy'
 
 
-# Function to calculate the lags of close price
 def lags(my_data, my_sp):
+    """Function to calculate the lags of close price"""
     all_lag = pd.DataFrame()
     combined = my_data
 
@@ -20,16 +22,12 @@ def lags(my_data, my_sp):
 
         for lag in range(0, 5):
             ticker[f'lag_{lag}'] = ticker['close'].shift(lag)
-        all_lag = all_lag.append(ticker)
+        all_lag = pd.concat([all_lag, ticker], axis=0)
 
     # Keep only interested columns
-    all_lag = all_lag.drop(all_lag[['open', 'high', 'low', 'adjclose', 'volume']], axis=1)
     all_lag['date'] = all_lag.index
+    all_lag = all_lag.drop(all_lag[['open', 'high', 'low', 'adjclose', 'volume', 'date']], axis=1)
     all_lag = all_lag.dropna()
-
-    # Calculate Buy/Sell
-    all_lag['next'] = all_lag['close'].shift(-1)
-    all_lag['out'] = all_lag.apply(tagger, axis=1)
 
     # print(all_lag)
     return all_lag
