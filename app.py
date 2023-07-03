@@ -4,7 +4,7 @@ import git
 from src.IO.get_data_from_yahoo import tickers_sp500, data_training, data_prediction
 from src.algo.transform_data import lags
 from src.algo.model import train_my_model
-from src.business_logic.process import compute_data_prediction
+from src.business_logic.process import compute_data_prediction, compute_data_prediction_gcp
 
 
 app = Flask(__name__)
@@ -32,7 +32,10 @@ def get_predict_value(my_ticker):
     sp500 = str(''.join(my_ticker))
     sp = [sp500]
     lag_table = lags(my_data_predict, sp)
-    prediction = compute_data_prediction(lag_table)
+
+    # locally prediction
+    # = compute_data_prediction(lag_table)
+    prediction = compute_data_prediction_gcp(lag_table)
     return prediction
 
 

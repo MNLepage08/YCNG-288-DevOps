@@ -3,6 +3,7 @@ from sklearn.metrics import balanced_accuracy_score
 from datetime import datetime
 import pickle
 from src.algo.transform_data import tagger
+from src.business_logic.process import load_model_in_bucket
 
 
 def compute_train_test(my_data):
@@ -45,5 +46,8 @@ def train_my_model(my_data, my_date):
     # Load the file locally
     filename = version_model
     pickle.dump(model_lr, open(filename, 'wb'))
+
+    # Load the file in GCP
+    load_model_in_bucket(my_date)
 
     return score
