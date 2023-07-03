@@ -163,6 +163,7 @@ Verify that the new environment was installed correctly:
 <details close>
 <summary>Link the Triggers<p></summary>
 
+* In navigate menu GCP, Artifact Registory, Repositories, click enable.
 * Docker ...
 * cloudbuild.yaml ...
 * run triggers, build artefact, give image, clic artefact registory, deploy to cloud run. name, max instance=2, authentification, allow ..., create. Docker run in the new instance in the cloud containing all. Click URL and put the link in web... should be work
