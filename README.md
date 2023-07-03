@@ -131,6 +131,15 @@ Verify that the new environment was installed correctly:
 
 </details>
 
+
+<details close>
+<summary>Link the Triggers<p></summary>
+
+* Docker ...
+* cloudbuild.yaml ...
+  
+</details>
+
   
 ## :mortar_board: Courses
 
