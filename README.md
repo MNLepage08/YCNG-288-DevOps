@@ -133,10 +133,39 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
+<summary>Build and test the docker image<p></summary>
+
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | Dockerfile | This file contains the definition of the steps to create the docker image. The image will be created by google build (CI/CD) and saved into the google storage. You can use this file to test the docker image on your local machine. |
+  
+* [Docker: ](https://docs.docker.com/get-docker/) Install Docker on your machine.
+  
+* Build a docker image on your local machine:
+  ```diff
+  docker build . -f Dockerfile -t my_image
+  
+* Run the docker image:
+  ```diff
+  docker run -p 8080:8080 -v $GOOGLE_APPLICATION_CREDENTIALS:/creds.json -e GOOGLE_APPLICATION_CREDENTIALS=/creds.json my_image
+
+* You can now test if the app is working using curl:
+  ```diff
+  curl http://0.0.0.0/[name_of_your_end_point]
+
+* (Optional) If for some reasons, you want to see what is going on inside the docker, you can start it in an interacting mode:
+  ```diff
+  docker run -it -p 8080:8080 -v $GOOGLE_APPLICATION_CREDENTIALS:/creds.json -e GOOGLE_APPLICATION_CREDENTIALS=/creds.json my_image /bin/bash
+
+</details>
+
+
+<details close>
 <summary>Link the Triggers<p></summary>
 
 * Docker ...
 * cloudbuild.yaml ...
+* run triggers, build artefact, give image, clic artefact registory, deploy to cloud run. name, max instance=2, authentification, allow ..., create. Docker run in the new instance in the cloud containing all. Click URL and put the link in web... should be work
   
 </details>
 
