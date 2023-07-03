@@ -178,7 +178,7 @@ Verify that the new environment was installed correctly:
 
   | Code organisation | Goal | 
   | ------------- | ------------- |
-  | src/IO/storage_tools.py | This file contains some function for the buckt in GCP (create bucket, uploader file to bucker, delete model, get model from bucket). |
+  | src/IO/storage_tools.py | This file contains some functions for the bucket in GCP (create bucket, upload file to bucker, delete model, get model from bucket). |
 
 * [Create a bucket:](https://cloud.google.com/storage/docs/creating-buckets?hl=fr)In navigate menu, click on Cloud Storage / Buckets. Click on create. + Create, Name of your bucket: devops_bucket_mnl. Create. The other way is to use function in the src/IO/storage_tools.py
   
