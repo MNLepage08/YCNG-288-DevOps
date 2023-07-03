@@ -34,8 +34,8 @@ def get_predict_value(my_ticker):
     lag_table = lags(my_data_predict, sp)
 
     # locally prediction
-    # = compute_data_prediction(lag_table)
-    prediction = compute_data_prediction_gcp(lag_table)
+    prediction = compute_data_prediction(lag_table)
+    # prediction = compute_data_prediction_gcp(lag_table)
     return prediction
 
 
