@@ -19,11 +19,11 @@ def compute_data_prediction(my_table):
     return prediction.flatten()[-1]
 
 
-# # name of your bucket in GCP
-# root_bucket = 'devops_bucket_mnl'
-# config = configparser.ConfigParser()
-# config.read('application.conf')
-# create_bucket(root_bucket)
+# name of your bucket in GCP
+root_bucket = 'devops_bucket_mnl08'
+config = configparser.ConfigParser()
+config.read('application.conf')
+create_bucket(root_bucket)
 
 
 # def get_version():
