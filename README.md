@@ -133,6 +133,14 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
+<summary>Docker<p></summary>
+  
+* [Docker: ](https://docs.docker.com/get-docker/)
+
+</details>
+
+
+<details close>
 <summary>Link the Triggers<p></summary>
 
 * Docker ...
