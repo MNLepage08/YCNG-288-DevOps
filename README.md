@@ -117,8 +117,12 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
-<summary>Google Cloud - Create a project, Get the credentials, Add a Triggers<p></summary>
-  
+<summary>Google Cloud: Create a project, Get the credentials, Create a repository on Artifact Registry<p></summary>
+
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | cloudbuild.yaml | To build your Docker image using a build config file. |
+
 * [Create your project:](https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=fr) In the navigation menu, select IAM & Admin / Create a project. Enter your project name (ex: YCNG-288-DevOps) and click create.
   
 * [Get the credentials (json):](https://developers.google.com/workspace/guides/create-credentials?hl=fr) In the navigation menu, select IAM & Admin / Service Accounts. Click on + create service account. Enter service account name and Service account ID (Project ID). Click on create and continue. Click on your service account created / keys / add keys / create a new key / JSON / create. Your private kay is saved on your computer.
@@ -127,7 +131,16 @@ Verify that the new environment was installed correctly:
   ```diff
   export GOOGLE_APPLICATION_CREDENTIALS='/path of the credentials.json'
 
-* [Add a Triggers:](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers?hl=fr) In navigate menu / Cloud Build / Click on enable. When is done, go in Triggers and click on create trigger. Enter a name (ex: YCNG-288-DevOps), Region: us-central1(lowa), Event: Push to a branch, Repository: Connect new repository. Select source code management provider: GitHub (Cloud Build GitHub App), continue. Select repository: GitHub Account, Repository: MNLepage08/YCNG-288-DevOps. Connect. Select the Repository, Branch ^main$. Click on create.
+* [Artifact Registry: ](https://cloud.google.com/build/docs/building/build-containers?hl=fr)In the navigation menu, select Artifact Registry / Repositories. Click on enable.  Click on + create registory. Name: stock, Format: Docker, Mode: standard, Region: northamerica-northeast1 (Montréal). Click on Create.
+  
+  When your repository is created, click on and copy the path. You need enter tris path in ```cloudbuild.yaml``` in the args ans images.
+  ```diff
+  steps:
+    name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'northamerica-northeast1-docker.pkg.dev/ycng-288-devops/stock/ycng_image_predictor', '.' ]
+  images: ['northamerica-northeast1-docker.pkg.dev/ycng-288-devops/stock/ycng_image_predictor']
+  timeout: '1200s'
+  ```
 
 </details>
 
@@ -161,11 +174,20 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
-<summary>Link the Triggers<p></summary>
+<summary>Google Cloud: Create a worker pool, Add a Triggers, Create a bucket<p></summary>
 
-* In navigate menu GCP, Artifact Registory, Repositories, click enable.
-* Docker ...
-* cloudbuild.yaml ...
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | src/IO/storage_tools.py | This file contains some functions for the bucket in GCP (create bucket, upload file to bucker, delete model, get model from bucket). |
+
+* [Create a bucket:](https://cloud.google.com/storage/docs/creating-buckets?hl=fr)In navigate menu, click on Cloud Storage / Buckets. Click on create. + Create, Name of your bucket: devops_bucket_mnl. Create. The other way is to use function in the src/IO/storage_tools.py
+  
+* Adapt your code in src/business_logic to create your bucket, load your model in bucket and give prediction from GCP.
+
+* [Create a worker pool: ](https://cloud.google.com/build/docs/private-pools/private-pools-overview?hl=fr)In navigate menu / Cloud Build / Click on enable. When is done, click on settgings / worker pool. Create, Name: stock, Machine type: e2-standard-16, Available disk size: 100.
+
+* [Add a Triggers:](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers?hl=fr) Go in Triggers and click on create trigger. Enter a name (ex: YCNG-288-DevOps), Region: us-central1(lowa), Event: Push to a branch, Repository: Connect new repository. Select source code management provider: GitHub (Cloud Build GitHub App), continue. Select repository: GitHub Account, Repository: MNLepage08/YCNG-288-DevOps. Connect. Select the Repository, Branch ^main$. Click on create.
+
 * run triggers, build artefact, give image, clic artefact registory, deploy to cloud run. name, max instance=2, authentification, allow ..., create. Docker run in the new instance in the cloud containing all. Click URL and put the link in web... should be work
   
 </details>
