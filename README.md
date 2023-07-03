@@ -174,9 +174,17 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
-<summary>Link the Triggers<p></summary>
+<summary>Google Cloud: Create a worker pool, Add a Triggers, Create a bucket<p></summary>
 
-* [Create a worker pool: ](https://cloud.google.com/build/docs/private-pools/private-pools-overview?hl=fr)In navigate menu / Cloud Build / Click on enable. When is done, click on settgings / worker pool. Create, Name: stock, Machine type: e2-standard-16, Available disk size: 100. Click on create.
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | src/IO/storage_tools.py | This file contains some function for the buckt in GCP (create bucket, uploader file to bucker, delete model, get model from bucket). |
+
+* [Create a bucket:](https://cloud.google.com/storage/docs/creating-buckets?hl=fr)In navigate menu, click on Cloud Storage / Buckets. Click on create. + Create, Name of your bucket: devops_bucket_mnl. Create. The other way is to use function in the src/IO/storage_tools.py
+  
+* Adapt your code in src/business_logic to create your bucket, load your model in bucket and give prediction from GCP.
+
+* [Create a worker pool: ](https://cloud.google.com/build/docs/private-pools/private-pools-overview?hl=fr)In navigate menu / Cloud Build / Click on enable. When is done, click on settgings / worker pool. Create, Name: stock, Machine type: e2-standard-16, Available disk size: 100.
 
 * [Add a Triggers:](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers?hl=fr) Go in Triggers and click on create trigger. Enter a name (ex: YCNG-288-DevOps), Region: us-central1(lowa), Event: Push to a branch, Repository: Connect new repository. Select source code management provider: GitHub (Cloud Build GitHub App), continue. Select repository: GitHub Account, Repository: MNLepage08/YCNG-288-DevOps. Connect. Select the Repository, Branch ^main$. Click on create.
 
