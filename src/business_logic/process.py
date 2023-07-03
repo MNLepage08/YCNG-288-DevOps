@@ -20,10 +20,10 @@ def compute_data_prediction(my_table):
 
 
 # name of your bucket in GCP
-root_bucket = 'devops_bucket_mnl'
+root_bucket = 'bucket_devops_mnl'
 config = configparser.ConfigParser()
 config.read('application.conf')
-# create_bucket(root_bucket)
+create_bucket(root_bucket)
 
 
 # def get_version():
