@@ -67,18 +67,24 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 <details close>
 <summary>Create a conda environtment<p></summary>
   
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | scripts/environment.yml | For create a conda environment. |
+  
 Suppose you have already installed [conda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/), create an environment from an [environment.yml](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#creating-an-environment-from-an-environment-yml-file) file
-```
-$ conda env create -f YCNG-288-DevOps/scripts/environment.yml
-``` 
+  ```
+  $ conda env create -f YCNG-288-DevOps/scripts/environment.yml
+  ```
+  
 Activate the new environment:
-```
-$ conda activate DevOps
-```
+  ```
+  $ conda activate DevOps
+  ```
+  
 Verify that the new environment was installed correctly:
-```
-$ conda env list
-```
+  ```
+  $ conda env list
+  ```
   
 </details>   
 
@@ -91,6 +97,48 @@ $ conda env list
 * Ready to work locally.
   
 </details> 
+
+
+<details close>
+<summary>Local development workflow<p></summary>
+  
+  | Code organisation | Goal | 
+  | ------------- | ------------- |
+  | app.py | This file contains the main for the Flask server. It is also the entrypoint of the app. The purpose of this project is not to be a master developing an app, so the work in this file should remains minimal. |
+  | src/IO | This directory deal with fetching the data. |
+  | src/algo | This directory contains the code to transform the data and create the model. |
+  | src/business_logic | This code contains the logic to process the query. |
+
+* You should see this process as circles. You might spend a lot of time iterating on models/strategies. However, you should always stay close to a production state where the code can run on GCP. To do so, I recommend baby steps and make sure your changes will not break the app functionality.
+
+* Run python ```app.py``` and use curl ```http://localhost:8080/[name_of_your_end_point]``` to test the endpoint. You can run the server from your favorite IDE. This will help to debug.
+  
+</details> 
+
+
+<details close>
+<summary>Google Cloud - Create a project, Get the credentials, Add a Triggers<p></summary>
+  
+* [Create your project:](https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=fr) In the navigation menu, select IAM & Admin / Create a project. Enter your project name (ex: YCNG-288-DevOps) and click create.
+  
+* [Get the credentials (json):](https://developers.google.com/workspace/guides/create-credentials?hl=fr) In the navigation menu, select IAM & Admin / Service Accounts. Click on + create service account. Enter service account name and Service account ID (Project ID). Click on create and continue. Click on your service account created / keys / add keys / create a new key / JSON / create. Your private kay is saved on your computer.
+  
+* Set up the environment variable ```GOOGLE_APPLICATION_CREDENTIALS``` on your terminal:
+  ```diff
+  export GOOGLE_APPLICATION_CREDENTIALS='/path of the credentials.json'
+
+* [Add a Triggers:](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers?hl=fr) In navigate menu / Cloud Build / Click on enable. When is done, go in Triggers and click on create trigger. Enter a name (ex: YCNG-288-DevOps), Region: us-central1(lowa), Event: Push to a branch, Repository: Connect new repository. Select source code management provider: GitHub (Cloud Build GitHub App), continue. Select repository: GitHub Account, Repository: MNLepage08/YCNG-288-DevOps. Connect. Select the Repository, Branch ^main$. Click on create.
+
+</details>
+
+
+<details close>
+<summary>Link the Triggers<p></summary>
+
+* Docker ...
+* cloudbuild.yaml ...
+  
+</details>
 
   
 ## :mortar_board: Courses
