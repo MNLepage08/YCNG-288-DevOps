@@ -20,7 +20,7 @@ def compute_data_prediction(my_table):
 
 
 # name of your bucket in GCP
-root_bucket = 'devops_bucket_mnl08'
+root_bucket = 'devops_bucket_mnl_008'
 config = configparser.ConfigParser()
 config.read('application.conf')
 create_bucket(root_bucket)
