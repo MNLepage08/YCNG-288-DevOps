@@ -182,7 +182,7 @@ Verify that the new environment was installed correctly:
 
 * [Add a Triggers:](https://cloud.google.com/build/docs/automating-builds/create-manage-triggers?hl=fr) Go in Triggers and click on create trigger. Enter a name (ex: YCNG-288-DevOps), Region: us-central1(lowa), Event: Push to a branch, Repository: Connect new repository. Select source code management provider: GitHub (Cloud Build GitHub App), continue. Select repository: GitHub Account, Repository: MNLepage08/YCNG-288-DevOps. Connect. Select the Repository, Branch ^main$. Click on create.
 
-* run triggers, build artefact, give image, clic artefact registory, deploy to cloud run. name, max instance=2, authentification, allow ..., create. Docker run in the new instance in the cloud containing all. Click URL and put the link in web... should be work
+* On your Triggers created, click on run. On the History, you can see you trigges running. When is finished to rin, click on the Build number. Build Artifacts, click on view (image of ycng_image_predictor:latest) On the Artifact Registry, click on deploy to cloud run: Maximum number of instances = 10, Cloud Run Admin API needs to be enabled to use this option, Authentification, Allow unauthenticated invocations, click on create. Docker run the new instance in the cloud containing all. When is done, copy the URL and put the link in web. The application is now deployed and accessible.
   
 </details>
 
