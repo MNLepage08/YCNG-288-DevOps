@@ -5,11 +5,9 @@
 * Design an iterative approach to deliver a data science solution where each step will bring additional value.
 * Apply the design thinking methodology to draw clear objectives of a data science project.
 * Foresee the challenges of deploying and maintain a machine learning model and to avoid the last mile issue.
-* Create a solution for stock market prediction.
 
 
-   
-  
+ 
 ## :rocket: Assignments
  
 **Project: Where should I invest my money?** I am an investor focused on the S&P 500. I would like to use AI to know every night what should I buy and what should I sell. My strategy is: ”If the price of today is higher than the price of tomorrow, I sell. If the price of today is lower than the price of tomorrow, I buy”. Can you help me with this project?
@@ -168,7 +166,7 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
-<summary>Google Cloud: Create a bucket, Create a worker pool, Add a Triggers<p></summary>
+<summary>Google Cloud: Create a bucket, Create a worker pool, Add a Triggers, Deploy the app on GCP<p></summary>
 
   | Code organisation | Goal | 
   | ------------- | ------------- |
