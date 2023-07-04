@@ -46,20 +46,14 @@
 ## :hammer_and_wrench: Setup Environments
   
 <details close>
-<summary>Create a GitHub repo<p></summary>
+<summary>Create and clone a repo on GitHub repo<p></summary>
 
-[GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)"To put your project up on GitHub, you will need to create a repository for it to live in." Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
-  
-</details>   
-  
-  
-<details close>
-<summary>Clone the repo<p></summary>
+* [GitHub repo: ](https://docs.github.com/en/get-started/quickstart/create-a-repo)"To put your project up on GitHub, you will need to create a repository for it to live in." Assuming you have a GitHub account. I recommend to use the gmail account where have your GCP.
 
-[Cloning a repository: ](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
-```
-$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
-``` 
+* [Cloning a repository: ](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository)"When you create a repository on GitHub.com, it exists as a remote repository. You can clone your repository to create a local copy on your computer and sync between the two locations."
+  ```
+  $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+  ``` 
   
 </details>  
   
@@ -125,7 +119,7 @@ Verify that the new environment was installed correctly:
 
 * [Create your project:](https://cloud.google.com/resource-manager/docs/creating-managing-projects?hl=fr) In the navigation menu, select IAM & Admin / Create a project. Enter your project name (ex: YCNG-288-DevOps) and click create.
   
-* [Get the credentials (json):](https://developers.google.com/workspace/guides/create-credentials?hl=fr) In the navigation menu, select IAM & Admin / Service Accounts. Click on + create service account. Enter service account name and Service account ID (Project ID). Click on create and continue. Click on your service account created / keys / add keys / create a new key / JSON / create. Your private kay is saved on your computer.
+* [Get the credentials (json):](https://developers.google.com/workspace/guides/create-credentials?hl=fr) In the navigation menu, select IAM & Admin / Service Accounts. Click on + create service account. Enter service account name and Service account ID (Project ID). Grant this service account access to project (optional): Select a role / Basic / Editor, Owner. Click on create and continue. Click on your service account created / keys / add keys / create a new key / JSON / create. Your private kay is saved on your computer.
   
 * Set up the environment variable ```GOOGLE_APPLICATION_CREDENTIALS``` on your terminal:
   ```diff
@@ -174,13 +168,13 @@ Verify that the new environment was installed correctly:
 
 
 <details close>
-<summary>Google Cloud: Create a worker pool, Add a Triggers, Create a bucket<p></summary>
+<summary>Google Cloud: Create a bucket, Create a worker pool, Add a Triggers<p></summary>
 
   | Code organisation | Goal | 
   | ------------- | ------------- |
   | src/IO/storage_tools.py | This file contains some functions for the bucket in GCP (create bucket, upload file to bucker, delete model, get model from bucket). |
 
-* [Create a bucket:](https://cloud.google.com/storage/docs/creating-buckets?hl=fr)In navigate menu, click on Cloud Storage / Buckets. Click on create. + Create, Name of your bucket: devops_bucket_mnl. Create. The other way is to use function in the src/IO/storage_tools.py
+* [Create a bucket:](https://cloud.google.com/storage/docs/creating-buckets?hl=fr)In navigate menu, click on Cloud Storage / Buckets. Click on create. + Create, Name of your bucket: devops_bucket_mnl. Create. The other way is to use function in the src/IO/storage_tools.py and create when you run the docker image.
   
 * Adapt your code in src/business_logic to create your bucket, load your model in bucket and give prediction from GCP.
 
