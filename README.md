@@ -371,10 +371,10 @@ Verify that the new environment was installed correctly:
 <summary>7. Iteration 1: Improve the solution. Methods to increase accuracy/ precision, or other metrics. How to optimize your time?<p></summary>
 
 * **Over or Under fitting?** Classification / Regression<p>
-<img width="300" alt="Capture d’écran, le 2023-07-20 à 11 57 24" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/9b45b2ee-6c0a-49c8-877b-fabb5fff6dc6"> <img width="500" alt="Capture d’écran, le 2023-07-20 à 11 57 11" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/05923b1e-d4a0-4a65-9af8-ef7317b03b18"><p>
+<img width="250" alt="Capture d’écran, le 2023-07-20 à 11 57 24" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/9b45b2ee-6c0a-49c8-877b-fabb5fff6dc6"> <img width="450" alt="Capture d’écran, le 2023-07-20 à 11 57 11" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/05923b1e-d4a0-4a65-9af8-ef7317b03b18"><p>
 
 * **Bias and Variance TradeOff:** Ideally, we would like a low variance and low bias. High Bias = overfitting. High Variance = underfitting. What cause a high variance or high bias? Model complexity.<p>
-<img width="300" alt="Capture d’écran, le 2023-07-20 à 12 06 45" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/735d5a88-ad08-46d4-9a7d-e31eda4f8962"> <img width="500" alt="Capture d’écran, le 2023-07-20 à 12 08 52" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/9dcef5f5-f7dc-4352-bbe9-42d0e7f899e9">
+<img width="250" alt="Capture d’écran, le 2023-07-20 à 12 06 45" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/735d5a88-ad08-46d4-9a7d-e31eda4f8962"> <img width="450" alt="Capture d’écran, le 2023-07-20 à 12 08 52" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/9dcef5f5-f7dc-4352-bbe9-42d0e7f899e9">
 
 * **Problem Complexity vs. Pipeline Capacity:**<p>
   Ideally, we would like: problem complexity == pipeline capacity.<p>
