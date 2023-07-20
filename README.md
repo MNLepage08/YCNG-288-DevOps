@@ -367,6 +367,41 @@ Verify that the new environment was installed correctly:
 </details>
 
 
+<details close>
+<summary>7. Iteration 1: Improve the solution. Methods to increase accuracy/ precision, or other metrics. How to optimize your time?<p></summary>
+
+* **Over or Under fitting?** Classification / Regression<p>
+<img width="300" alt="Capture d’écran, le 2023-07-20 à 11 57 24" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/9b45b2ee-6c0a-49c8-877b-fabb5fff6dc6"> <img width="500" alt="Capture d’écran, le 2023-07-20 à 11 57 11" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/05923b1e-d4a0-4a65-9af8-ef7317b03b18"><p>
+
+* **Bias and Variance TradeOff:** Ideally, we would like a low variance and low bias. High Bias = overfitting. High Variance = underfitting. What cause a high variance or high bias? Model complexity.<p>
+<img width="300" alt="Capture d’écran, le 2023-07-20 à 12 06 45" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/735d5a88-ad08-46d4-9a7d-e31eda4f8962"> <img width="500" alt="Capture d’écran, le 2023-07-20 à 12 08 52" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/9dcef5f5-f7dc-4352-bbe9-42d0e7f899e9">
+
+* **Problem Complexity vs. Pipeline Capacity:**<p>
+  Ideally, we would like: problem complexity == pipeline capacity.<p>
+  If proplem complexity > pipeline capacity -> underfitting<p>
+  If proplem complexity < pipeline capacity -> overfitting
+
+* **Playing with pipeline capacity:** Adding/Removing features, Clean the data (remove errors/outliers from the data), Standadize/Normalize the data, Change hyperparameters (number of trees in RF model, Number of layers), ...
+
+* **Playing with problem complexity:** More data, one model per ticker, one model per cluster, one model for all, 2 classes vs. 5 classes, classification vs. regression, ...
+
+* <img width="281" align="right" alt="Capture d’écran, le 2023-07-20 à 12 30 17" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/7a36bf3b-b6c6-4e41-b85d-42d6f360060c">**Why is this a hard problem?** All those should be equally good, but they are not. The best is to have the highest complexity with the highest capacity. Risks:<p>
+  Higher complexity involves more iterations<p>
+  Higher complexity slow down the process<p>
+  We are always limited per the data
+
+* **How to proceed?**
+  1. Get the somplest baseline (low model capacity) on the simplest problem (low problem complexity)
+  2. Adress the under or overfitting situation
+  3. Adjust the pipeline capacity accordingly
+  4. Go to 2 until you reach a plateau
+  5. Increase the problem complexity
+  6. Go to 2
+  7. Repeat until your time is up
+
+</details>
+
+
 ## :books: Bibliography
 
 | <img width="150" alt="Capture d’écran, le 2023-06-05 à 17 38 38" src="https://github.com/MNLepage08/MNLepage08/assets/113123425/68236fc3-5c5c-4027-aa31-d16052eddc17"> | 
