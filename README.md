@@ -399,6 +399,10 @@ Verify that the new environment was installed correctly:
   6. Go to 2
   7. Repeat until your time is up
 
+* <img width="304" align="right" alt="Capture d’écran, le 2023-07-20 à 13 10 23" src="https://github.com/MNLepage08/YCNG-288-DevOps/assets/113123425/e668ad2b-952a-4c55-827f-e792548d3e2e">**Choose the right approach:** Stay with the same problem complexity, Find the optimal, Increase problem complexity, Repeat. Moving up is much time consuming than moving left or right.<p>
+  Increase problem complexity: the solution gets harder to find<p>
+  Increase pipeline capacity: the algoritm gets bigger
+
 </details>
 
 
